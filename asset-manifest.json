@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/frontend-iotku/static/css/main.1b3a15ea.chunk.css",
+    "main.js": "/frontend-iotku/static/js/main.642bbe5c.chunk.js",
+    "main.js.map": "/frontend-iotku/static/js/main.642bbe5c.chunk.js.map",
+    "runtime-main.js": "/frontend-iotku/static/js/runtime-main.6b72a9f2.js",
+    "runtime-main.js.map": "/frontend-iotku/static/js/runtime-main.6b72a9f2.js.map",
+    "static/js/2.fa665e2d.chunk.js": "/frontend-iotku/static/js/2.fa665e2d.chunk.js",
+    "static/js/2.fa665e2d.chunk.js.map": "/frontend-iotku/static/js/2.fa665e2d.chunk.js.map",
+    "index.html": "/frontend-iotku/index.html",
+    "precache-manifest.cb3a004ddb56abd00cbc5844fa8fdab4.js": "/frontend-iotku/precache-manifest.cb3a004ddb56abd00cbc5844fa8fdab4.js",
+    "service-worker.js": "/frontend-iotku/service-worker.js",
+    "static/css/main.1b3a15ea.chunk.css.map": "/frontend-iotku/static/css/main.1b3a15ea.chunk.css.map",
+    "static/js/2.fa665e2d.chunk.js.LICENSE.txt": "/frontend-iotku/static/js/2.fa665e2d.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/frontend-iotku/static/media/logo.c1cc3d53.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6b72a9f2.js",
+    "static/js/2.fa665e2d.chunk.js",
+    "static/css/main.1b3a15ea.chunk.css",
+    "static/js/main.642bbe5c.chunk.js"
+  ]
+}
