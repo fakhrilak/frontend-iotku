@@ -1,0 +1,19 @@
+.Container-button {
+    text-align: center;
+    padding-top: 30px;
+}
+.Container-button button{
+    width: 100px;
+    height: 40px;
+    font-size: larger;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#ffffff;
+    background-color: black;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.button-minus button{
+    background-color: red;
+}
