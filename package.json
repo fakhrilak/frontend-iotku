@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "homepage": "http://fakhrilak.github.io/ts-009",
+  "homepage": "http://fakhrilak.github.io/frontend-iotku",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
