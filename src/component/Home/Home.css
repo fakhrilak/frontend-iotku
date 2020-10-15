@@ -9,7 +9,7 @@
 .Body-Home{
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     gap: 1rem;
     margin-left: 20px;
     margin-right: 20px;
@@ -18,8 +18,8 @@
     align-items: center;
 }
 .objeck-render button{
-    min-width: 100px;
-    height: auto;
+    min-width: 150px;
+    min-height: 50px;
     border-radius: 10px;
     font-weight: bold;
     padding-top: 3px;
@@ -28,6 +28,6 @@
     background-color: white;
 }
 .objeck-render input{
-    width: 100px;
+    min-width: 150px;
     border-radius: 10px;
 }

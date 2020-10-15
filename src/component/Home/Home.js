@@ -45,7 +45,9 @@ const Home = ({getDataUserId,editData,auth:{isAuthenticated,user},Iot:{data_user
                 (<button
                   onClick={()=>HandleEdit(data.id,data.data)}
                   style={{background: data.data === "0"?"white":"grey"}}
-                >{data.text}</button>):
+                >{data.text}
+                <p>{data.id}</p>
+                </button>):
 
                 data.type == "Input" ?
                 (<div>
