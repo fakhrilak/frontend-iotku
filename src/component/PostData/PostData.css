@@ -1,0 +1,23 @@
+.form-submit{
+    padding-top: 30px;
+}
+
+.btn-submit{
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #201e1e;
+    color: white;
+    font-weight: bolder;
+}
+
+.form-group{
+    padding-top: 30px;
+}
+
+.Containet-PostData input{
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+    padding-left: 20px;
+}

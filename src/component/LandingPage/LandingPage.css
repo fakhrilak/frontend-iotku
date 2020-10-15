@@ -1,0 +1,26 @@
+.container-landingpage input{
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+.container-landingpage p{
+    color: white;
+    padding-top: 100px;
+}
+.form-submit{
+    padding-top: 30px;
+}
+
+.btn-submit{
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #201e1e;
+    color: white;
+    font-weight: bolder;
+}
+
+.form-group{
+    padding-top: 30px;
+}

@@ -1,0 +1,33 @@
+.container-Home{
+
+}
+.img-home{
+    height: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.Body-Home{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.objeck-render{
+    align-items: center;
+}
+.objeck-render button{
+    min-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    font-weight: bold;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border:none;
+    background-color: white;
+}
+.objeck-render input{
+    width: 100px;
+    border-radius: 10px;
+}

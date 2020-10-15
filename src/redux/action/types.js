@@ -4,5 +4,31 @@ export const POST_DATA_FAIL = "POST_DATA_FAIL";
 export const GET_DATA_SUCCESS = "GET_DATA_SUCCESS";
 export const GET_DATA_FAIL = "GET_DATA_FAIL";
 
+export const DELETE_DATA_SUCCESS = "DELET_DATA_SUCCESS";
+export const DELET_DATA_FAIL = "DELET_DATA_FAIL";
+
+export const GET_DATA_ID_SUCCESS = "GET_DATA_ID_SUCCESS";
+export const GET_DATA_ID_FAIL = "GET_DATA_ID_FAIL";
+
 export const EDIT_DATA_SUCCESS = "EDIT_DATA_SUCCESS";
 export const EDIT_DATA_FAIL = "EDIT_DATA_FAIL";
+
+
+
+export const GET_USER_SUCCESS = "GET_USER_SUCCESS";
+export const GET_USER_FAIL = "GET_USER_FAIL"
+
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAIL = 'LOGIN_FAIL';
+
+export const LOGOUT = 'LOGOUT';
+export const CLEAR_PROFILE = 'CLEAR_PROFILE';
+
+export const USER_LOADED = 'USER_LOADED';
+export const AUTH_ERROR = 'AUTH_ERROR';
+
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const REGISTER_FAIL = 'REGISTER_FAIL';
+
+export const GET_DATA_USER_ID_SUCCESS = "GET_DATA_USER_ID_SUCCESS";
+export const GET_DATA_USER_ID_FAIL = "GET_DATA_USER_IS_FAIL"
