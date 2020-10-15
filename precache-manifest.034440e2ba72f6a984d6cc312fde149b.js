@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "503ac46eda9b6c2b21856a85587f0841",
+    "revision": "1482a46304dbfc5cda9d517c6f580f2f",
     "url": "/frontend-iotku/index.html"
   },
   {
-    "revision": "3bab911a2710f02814dc",
-    "url": "/frontend-iotku/static/css/main.9322b925.chunk.css"
+    "revision": "0ef19e9fa96987392a1a",
+    "url": "/frontend-iotku/static/css/main.f0961b6b.chunk.css"
   },
   {
     "revision": "1e3d61498aec4d290f29",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend-iotku/static/js/2.76e98b6a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3bab911a2710f02814dc",
-    "url": "/frontend-iotku/static/js/main.5d417bab.chunk.js"
+    "revision": "0ef19e9fa96987392a1a",
+    "url": "/frontend-iotku/static/js/main.5ec25fba.chunk.js"
   },
   {
     "revision": "844d50279774b853c87b",
