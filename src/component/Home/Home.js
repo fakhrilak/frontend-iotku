@@ -9,11 +9,12 @@ import PostData from "../PostData/PostData"
 
 const Home = ({getDataUserId,editData,auth:{isAuthenticated,user},Iot:{data_userId}}) => {
   const [Data,setData]=useState(false)
+  const [X,setX]=useState(false)
   useEffect(()=>{
     if(user){
       getDataUserId(user.id)
     }       
-  },[user,Data])
+  },[user,Data,X])
   
   let Dataa = data_userId
 
@@ -23,7 +24,8 @@ const Home = ({getDataUserId,editData,auth:{isAuthenticated,user},Iot:{data_user
     }else if(data==="1"){
       editData("0",id)
     }
-    getDataUserId(user.id)
+    getDataUserId(user.id);
+    setX(!X);
   }
   return (
     <div className="container-Home">
