@@ -3,9 +3,8 @@ import {postData} from "../../redux/action/iot"
 import {connect} from "react-redux"
 import "./PostData.css"
 import {handleLogout} from "../../redux/action/auth"
-const PostData = ({handleLogout,postData,auth:{user},setData,Data}) => {
+const PostData = ({handleLogout,postData,auth:{token},setData,Data}) => {
     const [formData, setFormData] = useState({
-        data: "",
         text: "",
         type: "",
       });
@@ -13,21 +12,26 @@ const PostData = ({handleLogout,postData,auth:{user},setData,Data}) => {
       const onChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       };
-    
       const { text, type } = formData;
-    
       const onSubmit = (e) => {
         e.preventDefault();
         postData(
           text,
-          type,
-          `${user.id}`
+          type
         );
+        setFormData({
+          text: "",
+          type: "",
+        })
       };
 
       const HandleLogout=()=>{
         handleLogout();
         setData(!Data)
+      }
+      const onCopy =(e)=>{
+        document.execCommand('copy');
+        e.target.focus(token)
       }
   return (
     <div className="Containet-PostData">
@@ -60,7 +64,15 @@ const PostData = ({handleLogout,postData,auth:{user},setData,Data}) => {
                   </button>
               </div>
           </form>
-          <div style={{paddingTop:200,paddingLeft:250}}>
+          <div style={{paddingTop:200,display: token?'flex':"default",paddingLeft:190}}>
+           {token && <div style={{paddingRight:10}}>
+              <button onClick={() => {navigator.clipboard.writeText(token)}} 
+           className='btn-submit'
+           >
+              Copy Token
+            </button>
+            </div>}
+           
             <button  className='btn-submit'
             onClick={()=>HandleLogout()}
             >

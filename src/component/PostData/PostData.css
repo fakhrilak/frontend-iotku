@@ -14,10 +14,25 @@
 .form-group{
     padding-top: 30px;
 }
+.Containet-PostData{
 
+}
 .Containet-PostData input{
     width: 200px;
     height: 30px;
     border-radius: 30px;
     padding-left: 20px;
+}
+
+.contaiiner-token{
+    color: white;
+    align-items: center;
+    max-block-size: 480px;
+    background-color: teal;
+    text-align: center;
+    width: auto;
+}
+.contaiiner-token p{
+    width: auto;
+    
 }

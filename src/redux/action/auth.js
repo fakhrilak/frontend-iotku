@@ -47,7 +47,6 @@ export const handleRegister = (
     password,
     fullname,
     phone,
-    role: 2,
   });
 
   try {

@@ -8,18 +8,18 @@ import {
     LOGOUT,
     CLEAR_PROFILE
   } from "../action/types";
- 
+
   const initialState = {
     token: localStorage.getItem("token"),
     isAuthenticated: null,
     loading: true,
     user: null,
     error:null,
+    token:null
   };
   
   export default function (state = initialState, action) {
     const { type, payload } = action;
-  
     switch (type) {
       case USER_LOADED:
         return {
@@ -35,7 +35,8 @@ import {
           ...state,
           isAuthenticated: true,
           loading: false,
-          error:null
+          error:null,
+          token:payload.token
         };
       case REGISTER_FAIL:
         return{

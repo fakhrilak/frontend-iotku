@@ -22,8 +22,7 @@ import { API } from "../../config/api";
 
 export const postData = (
     text,
-    type,
-    UserId
+    type
   ) => async (dispatch) => {
     
     const config = {
@@ -35,7 +34,6 @@ export const postData = (
     const body = JSON.stringify({
       text,
       data:"0",
-      UserId,
       type,
     });
     try {
