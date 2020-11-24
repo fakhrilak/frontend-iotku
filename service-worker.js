@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/frontend-iotku/precache-manifest.d8f6de8d522a99f38cb368974433c256.js"
+  "/frontend-iotku/precache-manifest.490876a59d7efb6b2da2e17cee267957.js"
 );
 
 self.addEventListener('message', (event) => {
