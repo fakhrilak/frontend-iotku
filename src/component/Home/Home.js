@@ -16,16 +16,22 @@ const Home = ({auth:{isAuthenticated,user}}) => {
   useEffect(()=>{
     if (user){
       socket.emit('getAlldata',user.id)
-      console.log(user.id)
     }  
   },[Data,user])
 
   useEffect(()=>{
     socket.on('responsegetall',data=>{
     setGetAlldata(data)
-    console.log("seted")
   })
   },[Data,user])
+  let sorted = 0
+  if(getAlldata !== 0){
+    sorted = [...getAlldata].sort((a,b)=>{
+      return a.id - b.id
+    })
+    console.log(getAlldata,'befor sorted')
+    console.log(sorted,'sorted')
+  }
   
 const HandleUpdate=(id,data)=>{
   if (data === '1'){
@@ -41,7 +47,7 @@ const HandleUpdate=(id,data)=>{
         <img src={Logo} className="img-home" onClick={()=>setData(!Data)}/>
         {!Data && <div className="Body-Home">
             {getAlldata == 0 ? (<div>loading...</div>):
-                (getAlldata.map((datas,index)=>(
+                (sorted.map((datas,index)=>(
               <div key={index}>
                 <button onClick={()=>HandleUpdate(datas.id,datas.data)}
                 style={{backgroundColor:datas.data == '0'? "white":"grey"}}
