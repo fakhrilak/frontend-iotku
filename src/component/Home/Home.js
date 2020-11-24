@@ -8,20 +8,22 @@ import PostData from "../PostData/PostData"
 
 
 const Home = ({auth:{isAuthenticated,user}}) => {
-  const ENDPOINT = "ws://localhost:5000";
+  const ENDPOINT = "ws://fakhrilak-iotku.herokuapp.com/";
   const socket = socketIOClient(ENDPOINT);
   const [Data,setData] = useState(false)
-  const [getAlldata,setGetAlldata] = useState(0)
+  const [getAlldata,setGetAlldata] = useState("")
   
   useEffect(()=>{
     if (user){
       socket.emit('getAlldata',user.id)
+      console.log(user.id)
     }  
   },[Data,user])
 
   useEffect(()=>{
     socket.on('responsegetall',data=>{
     setGetAlldata(data)
+    console.log("seted")
   })
   },[Data,user])
   
@@ -38,7 +40,7 @@ const HandleUpdate=(id,data)=>{
       {isAuthenticated &&<div>
         <img src={Logo} className="img-home" onClick={()=>setData(!Data)}/>
         {!Data && <div className="Body-Home">
-            {getAlldata === 0 ? null:
+            {getAlldata == 0 ? (<div>loading...</div>):
                 (getAlldata.map((datas)=>(
               <div key={datas.id}>
                 <button onClick={()=>HandleUpdate(datas.id,datas.data)}
