@@ -8,7 +8,7 @@ import PostData from "../PostData/PostData"
 
 
 const Home = ({auth:{isAuthenticated,user}}) => {
-  const ENDPOINT = "ws://fakhrilak-iotku.herokuapp.com/";
+  const ENDPOINT = "https://fakhrilak-iotku.herokuapp.com/";
   const socket = socketIOClient(ENDPOINT);
   const [Data,setData] = useState(false)
   const [getAlldata,setGetAlldata] = useState("")
