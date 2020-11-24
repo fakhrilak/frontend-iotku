@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/frontend-iotku/static/css/main.a4f59d23.chunk.css",
-    "main.js": "/frontend-iotku/static/js/main.27a2db2c.chunk.js",
-    "main.js.map": "/frontend-iotku/static/js/main.27a2db2c.chunk.js.map",
+    "main.js": "/frontend-iotku/static/js/main.9d00e657.chunk.js",
+    "main.js.map": "/frontend-iotku/static/js/main.9d00e657.chunk.js.map",
     "runtime-main.js": "/frontend-iotku/static/js/runtime-main.6b72a9f2.js",
     "runtime-main.js.map": "/frontend-iotku/static/js/runtime-main.6b72a9f2.js.map",
-    "static/js/2.319eb4d1.chunk.js": "/frontend-iotku/static/js/2.319eb4d1.chunk.js",
-    "static/js/2.319eb4d1.chunk.js.map": "/frontend-iotku/static/js/2.319eb4d1.chunk.js.map",
+    "static/js/2.d33408f8.chunk.js": "/frontend-iotku/static/js/2.d33408f8.chunk.js",
+    "static/js/2.d33408f8.chunk.js.map": "/frontend-iotku/static/js/2.d33408f8.chunk.js.map",
     "index.html": "/frontend-iotku/index.html",
-    "precache-manifest.2ddf19743190f39ec54f0c02cce6a325.js": "/frontend-iotku/precache-manifest.2ddf19743190f39ec54f0c02cce6a325.js",
+    "precache-manifest.5081e9ea4ce2cf439d5148315359d595.js": "/frontend-iotku/precache-manifest.5081e9ea4ce2cf439d5148315359d595.js",
     "service-worker.js": "/frontend-iotku/service-worker.js",
     "static/css/main.a4f59d23.chunk.css.map": "/frontend-iotku/static/css/main.a4f59d23.chunk.css.map",
-    "static/js/2.319eb4d1.chunk.js.LICENSE.txt": "/frontend-iotku/static/js/2.319eb4d1.chunk.js.LICENSE.txt",
+    "static/js/2.d33408f8.chunk.js.LICENSE.txt": "/frontend-iotku/static/js/2.d33408f8.chunk.js.LICENSE.txt",
     "static/media/logo.png": "/frontend-iotku/static/media/logo.c1cc3d53.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6b72a9f2.js",
-    "static/js/2.319eb4d1.chunk.js",
+    "static/js/2.d33408f8.chunk.js",
     "static/css/main.a4f59d23.chunk.css",
-    "static/js/main.27a2db2c.chunk.js"
+    "static/js/main.9d00e657.chunk.js"
   ]
 }
