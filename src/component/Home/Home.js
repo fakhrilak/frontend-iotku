@@ -5,7 +5,7 @@ import {connect} from "react-redux"
 import "./Home.css"
 import socketIOClient from "socket.io-client";
 import PostData from "../PostData/PostData"
-
+import {API} from "../../config/api"
 
 const Home = ({auth:{isAuthenticated,user}}) => {
   const ENDPOINT = "https://fakhrilak-iotku.herokuapp.com/";
@@ -41,8 +41,8 @@ const HandleUpdate=(id,data)=>{
         <img src={Logo} className="img-home" onClick={()=>setData(!Data)}/>
         {!Data && <div className="Body-Home">
             {getAlldata == 0 ? (<div>loading...</div>):
-                (getAlldata.map((datas)=>(
-              <div key={datas.id}>
+                (getAlldata.map((datas,index)=>(
+              <div key={index}>
                 <button onClick={()=>HandleUpdate(datas.id,datas.data)}
                 style={{backgroundColor:datas.data == '0'? "white":"grey"}}
               >{datas.text}</button>
