@@ -67,5 +67,5 @@ const mapStateToProps = (state) => ({
   auth: state.Auth,
   Iot: state.Iot
 });
-
+//https://fakhrilak.github.io/frontend-iotku/
 export default connect(mapStateToProps, {})(Home);
