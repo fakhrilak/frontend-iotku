@@ -2,76 +2,61 @@ import React,{useEffect,useState} from 'react'
 import LandingPage from "../LandingPage/LandingPage"
 import Logo from "../../img/logo.png"
 import {connect} from "react-redux"
-import {getDataId,editData,getDataUserId}from "../../redux/action/iot"
 import "./Home.css"
+import socketIOClient from "socket.io-client";
 import PostData from "../PostData/PostData"
 
 
-const Home = ({getDataUserId,editData,auth:{isAuthenticated,user},Iot:{data_userId}}) => {
-  const [Data,setData]=useState(false)
-  const [X,setX]=useState(false)
-  useEffect(()=>{
-    if(user){
-      getDataUserId(user.id)
-    }       
-  },[user,Data,X])
+const Home = ({auth:{isAuthenticated,user}}) => {
+  const ENDPOINT = "ws://localhost:5000";
+  const socket = socketIOClient(ENDPOINT);
+  const [Data,setData] = useState(false)
+  const [getAlldata,setGetAlldata] = useState(0)
   
-  let Dataa = data_userId
+  useEffect(()=>{
+    if (user){
+      socket.emit('getAlldata',user.id)
+    }  
+  },[Data,user])
 
-  const HandleEdit=(id,data)=>{
-    if(data=== "0"){
-      editData("1",id)
-    }else if(data==="1"){
-      editData("0",id)
-    }
-    getDataUserId(user.id);
-    setX(!X);
+  useEffect(()=>{
+    socket.on('responsegetall',data=>{
+    setGetAlldata(data)
+  })
+  },[Data,user])
+  
+const HandleUpdate=(id,data)=>{
+  if (data === '1'){
+    socket.emit('news', {data:0,token:"xnxx",id:id,user:user.id});
+  }else if (data === '0'){
+    socket.emit('news', {data:1,token:"xnxx",id:id,user:user.id});
   }
+  
+}
   return (
     <div className="container-Home">
       {isAuthenticated &&<div>
         <img src={Logo} className="img-home" onClick={()=>setData(!Data)}/>
+        {!Data && <div className="Body-Home">
+            {getAlldata === 0 ? null:
+                (getAlldata.map((datas)=>(
+              <div key={datas.id}>
+                <button onClick={()=>HandleUpdate(datas.id,datas.data)}
+                style={{backgroundColor:datas.data == '0'? "white":"grey"}}
+              >{datas.text}</button>
+            </div>
+        )))}
+        </div>}
       </div>}
 
       {!isAuthenticated &&<div>
         <LandingPage/>
       </div>}
-
-      {!Data && <div className="Body-Home">
-          {user == null? (<div> Loading...</div>):
-          (Dataa.map((data)=>
-              <div className="objeck-render">
-                {
-
-                data.type == "Button" ? 
-                (<button
-                  onClick={()=>HandleEdit(data.id,data.data)}
-                  style={{background: data.data === "0"?"white":"grey"}}
-                >{data.text}
-                <p>{data.id}</p>
-                </button>):
-
-                data.type == "Input" ?
-                (<div>
-                    <input
-                  placeholder={data.text}
-                  />
-                  <div style={{paddingTop:10}}>
-                    <button style={{minWidth:50}}>
-                      Kirim
-                    </button>
-                  </div>
-                </div>):
-                null
-                }
-              </div>
-            ))}
-      </div>}
-
+      
+      
       {Data && <PostData setData={setData} Data={Data}/>
 
       }
-
     </div>
   )
 }
@@ -81,4 +66,4 @@ const mapStateToProps = (state) => ({
   Iot: state.Iot
 });
 
-export default connect(mapStateToProps, { getDataId,editData,getDataUserId})(Home);
+export default connect(mapStateToProps, {})(Home);

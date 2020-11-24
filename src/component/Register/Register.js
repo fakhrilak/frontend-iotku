@@ -14,7 +14,6 @@ const Register = ({handleRegister}) => {
       };
 
       const { email, password, fullname, phone } = formData;
-      console.log(email)
       const onSubmit = (e) => {
         e.preventDefault();
         handleRegister(
@@ -23,7 +22,6 @@ const Register = ({handleRegister}) => {
           fullname,
           phone
         );
-        console.log("test")
       };
   return (
     <div>
