@@ -1,5 +1,5 @@
 .container-Home{
-
+    text-align: center;
 }
 .img-home{
     height: 80px;
@@ -30,4 +30,13 @@
 .objeck-render input{
     min-width: 120px;
     border-radius: 10px;
+}
+.lcd{
+    height: 100px;
+    width: 40%;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
 }

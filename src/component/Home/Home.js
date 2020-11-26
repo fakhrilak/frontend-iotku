@@ -12,6 +12,7 @@ const Home = ({auth:{isAuthenticated,user}}) => {
   const socket = socketIOClient(ENDPOINT);
   const [Data,setData] = useState(false)
   const [getAlldata,setGetAlldata] = useState("")
+  const [sensor,setsensor]= useState("")
   
   useEffect(()=>{
     if (user){
@@ -24,13 +25,16 @@ const Home = ({auth:{isAuthenticated,user}}) => {
     setGetAlldata(data)
   })
   },[Data,user])
+  useEffect(()=>{
+    socket.on("sendgivedata",data=>{
+      setsensor(data)
+    })
+  },[sensor])
   let sorted = 0
   if(getAlldata !== 0){
     sorted = [...getAlldata].sort((a,b)=>{
       return a.id - b.id
     })
-    console.log(getAlldata,'befor sorted')
-    console.log(sorted,'sorted')
   }
   
 const HandleUpdate=(id,data)=>{
@@ -41,10 +45,14 @@ const HandleUpdate=(id,data)=>{
   }
   
 }
+
   return (
     <div className="container-Home">
       {isAuthenticated &&<div>
         <img src={Logo} className="img-home" onClick={()=>setData(!Data)}/>
+        <div className="lcd">
+          <h1>{sensor}</h1>
+        </div>
         {!Data && <div className="Body-Home">
             {getAlldata == 0 ? (<div>loading...</div>):
                 (sorted.map((datas,index)=>(
