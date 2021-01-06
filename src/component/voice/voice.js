@@ -9,9 +9,10 @@ const Dictaphone = ({socket}) => {
   }
 
   const OnClick = ()=>{
-    resetTranscript()
-    SpeechRecognition.stopListening()
     socket.emit("voiceway",transcript)
+    SpeechRecognition.stopListening()
+    resetTranscript()
+    
   }
   return (
     <div className="Container-voice">
