@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/frontend-iotku/static/css/main.8e062cb4.chunk.css",
+    "main.css": "/frontend-iotku/static/css/main.c9eb09cc.chunk.css",
     "main.js": "/frontend-iotku/static/js/main.d7ec598f.chunk.js",
     "main.js.map": "/frontend-iotku/static/js/main.d7ec598f.chunk.js.map",
     "runtime-main.js": "/frontend-iotku/static/js/runtime-main.6b72a9f2.js",
@@ -8,16 +8,16 @@
     "static/js/2.12fd8748.chunk.js": "/frontend-iotku/static/js/2.12fd8748.chunk.js",
     "static/js/2.12fd8748.chunk.js.map": "/frontend-iotku/static/js/2.12fd8748.chunk.js.map",
     "index.html": "/frontend-iotku/index.html",
-    "precache-manifest.626c501ebeeaf913b1a3e6e0f0c0275d.js": "/frontend-iotku/precache-manifest.626c501ebeeaf913b1a3e6e0f0c0275d.js",
+    "precache-manifest.374b89a44603c36c510304efc4279c08.js": "/frontend-iotku/precache-manifest.374b89a44603c36c510304efc4279c08.js",
     "service-worker.js": "/frontend-iotku/service-worker.js",
-    "static/css/main.8e062cb4.chunk.css.map": "/frontend-iotku/static/css/main.8e062cb4.chunk.css.map",
+    "static/css/main.c9eb09cc.chunk.css.map": "/frontend-iotku/static/css/main.c9eb09cc.chunk.css.map",
     "static/js/2.12fd8748.chunk.js.LICENSE.txt": "/frontend-iotku/static/js/2.12fd8748.chunk.js.LICENSE.txt",
     "static/media/logo.png": "/frontend-iotku/static/media/logo.c1cc3d53.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6b72a9f2.js",
     "static/js/2.12fd8748.chunk.js",
-    "static/css/main.8e062cb4.chunk.css",
+    "static/css/main.c9eb09cc.chunk.css",
     "static/js/main.d7ec598f.chunk.js"
   ]
 }
