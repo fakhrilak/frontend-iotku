@@ -6,6 +6,7 @@ import "./Home.css"
 import socketIOClient from "socket.io-client";
 import PostData from "../PostData/PostData"
 import {API} from "../../config/api"
+import Voice from "../voice/voice"
 
 const Home = ({auth:{isAuthenticated,user}}) => {
   const ENDPOINT = "https://fakhrilak-iotku.herokuapp.com/";
@@ -53,6 +54,7 @@ const HandleUpdate=(id,data)=>{
         <div className="lcd">
           <h1>{sensor}</h1>
         </div>
+        <Voice socket={socket}/>
         {!Data && <div className="Body-Home">
             {getAlldata == 0 ? (<div>loading...</div>):
                 (sorted.map((datas,index)=>(
